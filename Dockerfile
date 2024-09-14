@@ -39,5 +39,5 @@ WORKDIR ${HOME}
 RUN wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O - | ZSH=${HOME}/.oh-my-zsh RUNZSH=no KEEP_ZSHRC=yes bash && \
     chown -R ${USER}:${USER} ${HOME}/.oh-my-zsh
 
-ENTRYPOINT ["/bin/zsh"]
+ENTRYPOINT ["/bin/zsh", "-i"]
 
