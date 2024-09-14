@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: toolchain-deployment
+  labels:
+    app: toolchain
+spec:
+  selector:
+    matchLabels:
+      app: toolchain
+  template:
+    metadata:
+      labels:
+        app: toolchain
+    spec:
+      containers:
+      - name: toolchain
+        image: ghcr.io/jacolate/toolchain:latest
