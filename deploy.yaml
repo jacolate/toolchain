@@ -16,3 +16,5 @@ spec:
       containers:
       - name: toolchain
         image: ghcr.io/jacolate/toolchain:latest
+        command: ["sleep"]
+        args: ["infinity"]
